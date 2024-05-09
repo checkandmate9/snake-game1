@@ -91,16 +91,16 @@
  };
  function changeDirection(event){
     const keyPressed = event.keyCode;
-    const LEFT = 37;
-    const UP = 38;
-    const RIGHT = 39;
-    const DOWN = 40;
+    const LEFT = 65;
+    const UP = 87;
+    const RIGHT = 68;
+    const DOWN = 83;
     
     const goingLEFT = (xVelocity == -unitSize);
     const goingUP = (yVelocity == -unitSize);
     const goingRIGHT = (xVelocity == unitSize);
     const goingDOWN= (yVelocity == unitSize);
-
+    
     switch(true){
         case(keyPressed == LEFT && !goingRIGHT):
         xVelocity = -unitSize;
@@ -119,6 +119,7 @@
         yVelocity = unitSize;
         break;
     }
+    //console.log(keyPressed);
  };
  function checkGameOver(){
     switch(true){
