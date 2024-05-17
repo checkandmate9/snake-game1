@@ -25,6 +25,12 @@
 
  window.addEventListener("keydown", changeDirection);
  resetBtn.addEventListener("click", resetGame);
+ 
+ document.addEventListener("keydown", function(event) {
+    if (event.code === "Space") {
+        resetGame();
+    }
+});
 
  gameStart();
  
@@ -163,6 +169,6 @@
             {x:unitSize, y:0},
             {x:0, y:0}
         ];
-    
+        
         gameStart();
     };
